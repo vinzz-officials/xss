@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>XSS Test</h2>
+    <form onsubmit="document.getElementById('out').innerHTML=document.getElementById('inp').value; return false;">
+      <input id="inp" placeholder="isi payload di sini" style="width:300px">
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="out" style="margin-top:20px;border:1px solid #aaa;padding:10px"></div>
+  </body>
+</html>
